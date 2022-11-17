@@ -6,7 +6,7 @@
 /*   By: aerrahim <aerrahim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:06:23 by aerrahim          #+#    #+#             */
-/*   Updated: 2022/11/03 20:58:53 by aerrahim         ###   ########.fr       */
+/*   Updated: 2022/11/14 19:58:27 by aerrahim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	unsigned int	i;
 
 	i = 0;
-//	if (!s)
-//		return (0);
 	while (s[i])
 		i++;
 	return (i);
