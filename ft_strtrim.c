@@ -14,18 +14,23 @@
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	int	start;
-	int	end;
-
-	start = -1;
+	size_t i;
+	size_t j;
+	char *trimmed;
+	
 	if (!s1 || !set)
-		return (0);
-	while (s1[++start])
-		if (!ft_strchr(set, s1[start]))
-			break ;
-	end = ft_strlen(s1);
-	while (end--)
-		if (!ft_strchr(set, s1[end]))
-			break ;
-	return (ft_substr((char *)s1, start, (1 + end - start)));
+		return (NULL)
+	i = 0;
+	j = ft_strlen(s1) - 1;
+	while (ft_strchr((char *)set, s1[i])
+	       i++;
+	while (ft_strchr((char *)set, s1[j])
+	       j--;
+	if (j < i)
+	       return (ft_strdup(""));
+	trimmed = malloc(j - i + 2);
+	if (!trimmed)
+	       return (NULL);
+	ft_strlcpy(trimmed, s1 + i, j - i + 2);
+	return (trimmed);
 }
