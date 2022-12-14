@@ -60,12 +60,12 @@ char	**ft_split(char const *s, char c)
 	int		j;
 
 	i = 0;
-	j = -1;
+	j = 0;
 	word = ft_count_word(s, c);
 	strs = (char **)malloc((word + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
-	while (++j < word)
+	while (j < word)
 	{
 		while (s[i] == c)
 			i++;
