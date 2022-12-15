@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aerrahim <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aahlyel <aahlyel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 20:02:13 by aerrahim          #+#    #+#             */
-/*   Updated: 2022/11/14 20:02:24 by aerrahim         ###   ########.fr       */
+/*   Updated: 2022/12/16 00:33:47 by aahlyel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_totalwords(char const *s, char c)
 {
@@ -49,7 +51,6 @@ static void	ft_free(char **strs, int i)
 	while (i-- > 0)
 		free (strs[i]);
 	free (strs);
-	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -61,14 +62,14 @@ char	**ft_split(char const *s, char c)
 	int		j;
 
 	i = 0;
-	j = 0;
+	j = -1;
 	if (!s)
 		return (NULL);
 	words = ft_totalwords(s, c);
 	strs = (char **)malloc((words + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
-	while (j < words)
+	while (++j < words)
 	{
 		while (s[i] == c)
 			i++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aerrahim <aerrahim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aahlyel <aahlyel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:06:26 by aerrahim          #+#    #+#             */
-/*   Updated: 2022/11/03 22:09:05 by aerrahim         ###   ########.fr       */
+/*   Updated: 2022/12/15 21:19:39 by aahlyel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-{
-	while (n--)
-	{
-		if(*(unsigned char *)(s++) == (unsigned char) c)
-			return ((void *)(s - 1));
-	}
-	return NULL;
-}
-*/

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aerrahim <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aahlyel <aahlyel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 19:54:58 by aerrahim          #+#    #+#             */
-/*   Updated: 2022/11/14 19:54:59 by aerrahim         ###   ########.fr       */
+/*   Updated: 2022/12/15 22:52:06 by aahlyel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -32,14 +32,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
-}
-char f(unsigned int i,char c)
-{
-	i = 1;
-	return (c = c - 1);
-}
-int main ()
-{
-char str[] = "hello";
-	printf("%s",ft_strmapi(str,f));
 }

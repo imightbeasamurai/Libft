@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aerrahim <aerrahim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aahlyel <aahlyel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:14:12 by aerrahim          #+#    #+#             */
-/*   Updated: 2022/11/01 12:32:47 by aerrahim         ###   ########.fr       */
+/*   Updated: 2022/12/15 21:18:13 by aahlyel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*{
-	size_t	i;
-
-	if (dst == src || len == 0)
-		return (dst);
-	i = -1;
-	if (dst > src)
-		while (len--)
-			((char *)dst)[len] = ((char *)src)[len];
-	else
-		while (++i < len)
-			((char *)dst)[i] = ((char *)src)[i];
-	return (dst);
-}*/
