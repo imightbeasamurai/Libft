@@ -14,10 +14,10 @@
 
 int	ft_atoi(const char *str)
 {
-	int		res;
+	int		sum;
 	int		sign;
 
-	res = 0;
+	sum = 0;
 	sign = 1;
 	while (*str == 32 || *str >= 9 && *str <= 13)
 		str++;
@@ -27,8 +27,8 @@ int	ft_atoi(const char *str)
 		str++;
 	while (*str >= '0' && *str <= '9')
 	{
-		res = res * 10 + *str - '0';
+		sum = sum * 10 + *str - '0';
 		str++;
 	}
-	return (res * sign);
+	return (sum * sign);
 }
