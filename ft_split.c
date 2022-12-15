@@ -10,28 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_count_word(char const *s, char c)
+static int	ft_totalwords(char const *s, char c)
 {
 	int	i;
-	int	word;
+	int	words;
 
 	i = 0;
-	word = 0;
+	words = 0;
 	while (s && s[i])
 	{
 		if (s[i] != c)
 		{
-			word++;
+			words++;
 			while (s[i] != c && s[i])
 				i++;
 		}
 		else
 			i++;
 	}
-	return (word);
+	return (words);
 }
 
-static int	ft_size_word(char const *s, char c, int i)
+static int	ft_wordsize(char const *s, char c, int i)
 {
 	int	size;
 
@@ -44,17 +44,18 @@ static int	ft_size_word(char const *s, char c, int i)
 	return (size);
 }
 
-static void	ft_free(char **strs, int j)
+static void	ft_free(char **strs, int i)
 {
-	while (j-- > 0)
-		free (strs[j]);
+	while (i-- > 0)
+		free (strs[i]);
 	free (strs);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	int		word;
+	int		words;
 	char	**strs;
 	int		size;
 	int		j;
@@ -63,15 +64,15 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	if (!s)
 		return (NULL);
-	word = ft_count_word(s, c);
-	strs = (char **)malloc((word + 1) * sizeof(char *));
+	words = ft_totalwords(s, c);
+	strs = (char **)malloc((words + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
-	while (j < word)
+	while (j < words)
 	{
 		while (s[i] == c)
 			i++;
-		size = ft_size_word(s, c, i);
+		size = ft_wordsize(s, c, i);
 		strs[j] = ft_substr((char *)s, i, size);
 		if (strs == NULL)
 			return (ft_free(strs, j), NULL);
