@@ -28,5 +28,3 @@ fclean : clean
 	${RM} ${NAME}
 
 re : fclean all
-
-.PHONY : clean all fclean re
