@@ -1,9 +1,0 @@
-{
-	"files.associations": {
-		"*.excalidraw": "json",
-		"*.excalidrawlib": "json",
-		"libft.h": "c",
-		"stdio.h": "c",
-		"unistd.h": "c"
-	}
-}
